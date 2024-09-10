@@ -14,12 +14,12 @@ def get_neighbors(cell):
 def get_neighbor_count(board):
     neighbor_counts = defaultdict(int)
     for cell in board:
-        for neighbor in getNeighbors(cell):
+        for neighbor in get_neighbors(cell):
             neighbor_counts[neighbor] += 1
     return neighbor_counts
 
 
-def advance_board(board):
+def advanced_board(board):
     new_board = set()
     for cell, count in get_neighbor_count(board).items():
         if count == 3 or (cell in board and count == 2):
@@ -51,7 +51,7 @@ def board_to_string(board, pad=0):
 
 if __name__ == "__main__":
     f = generate_board("......X.\nXX......\n.X...XXX")
-    for _ in range(130):
+    for _ in range(5):
         f = advanceBoard(f)
         print(boardToString(f, 2))
         print("--")
