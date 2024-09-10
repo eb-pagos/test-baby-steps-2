@@ -1,7 +1,9 @@
 from collections import namedtuple, defaultdict
 import time
 
-Cell = namedtuple("Cell", ["x", "y"])
+class Cell:
+    x = ...
+    y = ...
 
 
 def getNeighbors(cell):

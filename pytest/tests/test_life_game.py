@@ -3,7 +3,10 @@ from app.life_game import generate_board, Cell
 def test_initial_grid():
 
     board = generate_board(".X\n..")
-    # set
-    mock_board = set()
+    mock_sell = Cell()
+    mock_board = set(mock_sell)
 
-    assert mock_board  == board
+    assert board.size() ==  1
+
+
+def 
