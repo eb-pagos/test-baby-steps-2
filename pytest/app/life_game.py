@@ -1,5 +1,7 @@
+from collections import namedtuple
 
 
+Cell = namedtuple("Cell", ["x", "y"])
 
 def generate_board(desc):
     board = set()
